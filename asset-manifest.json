@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TextUtil/static/css/main.7834b833.chunk.css",
+    "main.js": "/TextUtil/static/js/main.060243f8.chunk.js",
+    "main.js.map": "/TextUtil/static/js/main.060243f8.chunk.js.map",
+    "runtime~main.js": "/TextUtil/static/js/runtime~main.53250eb2.js",
+    "runtime~main.js.map": "/TextUtil/static/js/runtime~main.53250eb2.js.map",
+    "static/js/2.624f555d.chunk.js": "/TextUtil/static/js/2.624f555d.chunk.js",
+    "static/js/2.624f555d.chunk.js.map": "/TextUtil/static/js/2.624f555d.chunk.js.map",
+    "static/js/3.d439ba6f.chunk.js": "/TextUtil/static/js/3.d439ba6f.chunk.js",
+    "static/js/3.d439ba6f.chunk.js.map": "/TextUtil/static/js/3.d439ba6f.chunk.js.map",
+    "index.html": "/TextUtil/index.html",
+    "precache-manifest.4fd4b0878e288543123f55135862eeba.js": "/TextUtil/precache-manifest.4fd4b0878e288543123f55135862eeba.js",
+    "service-worker.js": "/TextUtil/service-worker.js",
+    "static/css/main.7834b833.chunk.css.map": "/TextUtil/static/css/main.7834b833.chunk.css.map"
+  }
+}
