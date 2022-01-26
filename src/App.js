@@ -46,11 +46,11 @@ function App() {
           <Alert alert={alert}/>
         <div className="container my-5">
            <Routes>
-                <Route exact path="/about" element={<About/>} />
-                <Route  exact path="/" element= {<Textarea Textarea="Write text here in below" showAlert={showAlert} mode={mode}/>} />                 
+                <Route exact path="/about" element={<About mode={mode}/>} />
+                <Route  exact path="/" element= {<Textarea Textarea="Write text here in below" showAlert={showAlert} mode={mode}/>} />        
            </Routes> 
         </div>    
-    </Router>
+   </Router> 
     </>
   );
 }

@@ -1,30 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function About() {
-  const [myStyle, setmyStyle] = useState({
-    color: "white",
-    backgroundColor: "black",
-  });
-  const [btnText, setbtnText] = useState("Enable Darkmode");
-  const handleClick = () => {
-    if (myStyle.color === "black") {
-      setmyStyle({
-        color: "white",
-        backgroundColor: "black"
-      });
-    setbtnText("Disable Darkmode")
-    } else {
-      setmyStyle({
-        color: "black",
-        backgroundColor: "white"
-      });
-      setbtnText("Enable Darkmode")
-    }
-  };
+export default function About(props) {
+  // const [myStyle, setmyStyle] = useState({
+  //   color: "white",
+  //   backgroundColor: "black",
+  // })
+  let myStyle = {
+    color: props.mode === 'dark'?'white':'black',
+    backgroundColor: props.mode === 'dark'?'#452828':'white'
+  }
 
   return (
     <>
-      <div className="container" style={myStyle}>
+      <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
         <h1 className="my-3">About Us</h1>
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
@@ -38,7 +26,7 @@ export default function About() {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Accordion Item #1
+                <strong>Accordion Item #1</strong>
               </button>
             </h2>
             <div
@@ -71,7 +59,7 @@ export default function About() {
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                Accordion Item #2
+                <strong>Accordion Item #2</strong>
               </button>
             </h2>
             <div
@@ -104,7 +92,7 @@ export default function About() {
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                Accordion Item #3
+              <strong>Accordion Item #3 </strong>
               </button>
             </h2>
             <div
@@ -126,15 +114,6 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="container">
-          <button
-            type="button"
-            onClick={handleClick}
-            className="btn btn-success mx-2 my-3"
-          >
-            {btnText}
-          </button>
         </div>
       </div>
     </>

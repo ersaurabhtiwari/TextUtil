@@ -43,33 +43,37 @@ export default function Textarea(props) {
             onChange={handleText}
             placeholder="Leave a comment here"
             id="floatingTextarea2"
-            style={{ height: "300px",backgroundColor: props.mode==='dark'?'gray':'white' ,color: props.mode==='dark'?'white':'black'}}
+            style={{ height: "300px",backgroundColor: props.mode==='dark'?'#5c5151':'white' ,color: props.mode==='dark'?'white':'black'}}
             defaultValue={""}
           />
           <button
+            disabled={Text.length===0}
             type="button"
-            className="btn btn-primary my-3"
+            className="btn btn-primary mx-3 my-3"
             onClick={handleUpCase}
           >
             Convert to Uppercase
           </button>
           <button
+            disabled={Text.length===0}
             type="button"
-            className="btn btn-primary mx-3"
+            className="btn btn-primary mx-3 my-1"
             onClick={handleLoCase}
           >
             Convert to Lowercase
           </button>
           <button
+            disabled={Text.length===0}
             type="button"
-            className="btn btn-danger mx-2"
+            className="btn btn-danger mx-1 my-1"
             onClick={handleClear}
           >
             Clear Text
           </button>
           <button
+            disabled={Text.length===0}
             type="button"
-            className="btn btn-primary mx-3"
+            className="btn btn-primary mx-3 my-1"
             onClick={handleCopy}
           >
           Copy Text
@@ -79,9 +83,9 @@ export default function Textarea(props) {
       <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
         <h1>About above paragraphs</h1>
         <p>
-          No.of words {Text.split(" ").length} and Character {Text.length}
+          No.of words {Text.split(" ").filter((element)=>{return Text.length!==0}).length} and Character {Text.length}
         </p>
-        <p>{0.008 * Text.split(" ").length} Minute read</p>
+        <p>{0.008 * Text.split(" ").filter((element)=>{return Text.length!==0}).length} Minute read</p>
         <h2>Preview</h2>
         <p>{Text}</p>
       </div>
