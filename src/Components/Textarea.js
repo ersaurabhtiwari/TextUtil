@@ -83,7 +83,7 @@ export default function Textarea(props) {
       <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
         <h1>About above paragraphs</h1>
         <p>
-          No.of words {Text.split(" ").filter((element)=>{return Text.length!==0}).length} and Character {Text.length}
+          No.of words {Text.split(/\s+/).filter((element)=>{return Text.length!==0}).length} and Character {Text.length}
         </p>
         <p>{0.008 * Text.split(" ").filter((element)=>{return Text.length!==0}).length} Minute read</p>
         <h2>Preview</h2>
